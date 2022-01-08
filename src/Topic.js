@@ -1,4 +1,15 @@
-export default function Topic() {
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
+
+function Topic() {
   let { topicId } = useParams();
   return (
     <div>
