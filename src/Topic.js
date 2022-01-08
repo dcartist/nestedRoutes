@@ -9,7 +9,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 
-function Topic() {
+export default function Topic() {
   let { topicId } = useParams();
   return (
     <div>

@@ -8,7 +8,7 @@ import {
   useParams,
   useRouteMatch
 } from "react-router-dom";
-
+import Topic from "./Topic";
 export default function Topics() {
   let { path, url } = useRouteMatch();
   return (

@@ -1,19 +1,28 @@
 import "./styles.css";
-import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
+import Topics from "./Topics";
+// import Topic from "./Topic";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/topics">Topics</Link>
+        </li>
+      </ul>
+      <hr />
+      <Switch>
+        <Route exact path="/">
+          <p>Home</p>
+        </Route>
+        <Route path="/topics">
+          <Topics />
+        </Route>
+      </Switch>
     </div>
   );
 }
